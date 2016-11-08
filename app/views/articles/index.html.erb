@@ -1,5 +1,7 @@
 <h1>Listing articles</h1>
-
+<%= link_to 'New article', new_article_path %>
+<br>
+<br>
 <table>
   <tr>
     <th>Title</th>
@@ -14,3 +16,6 @@
     </tr>
   <% end %>
 </table>
+<br>
+<br>
+<%= link_to 'Back to start', controller: 'welcome' %>
