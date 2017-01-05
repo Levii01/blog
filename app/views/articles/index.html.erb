@@ -1,28 +1,29 @@
-<h1>Listing articles</h1>
-<%= link_to 'New article', new_article_path %>
-<br>
-<br>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="3"></th>
-  </tr>
-Jestem dzieckiem
-  <button type="button" class="btn btn-success">Success</button>u
+<%= render 'header' %>
+<div class='container'>
+    <h1>Listing articles</h1>
+    <%= link_to 'New article', new_article_path %>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Text</th>
+            <th colspan="3"></th>
+        </tr>
 
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
+        <% @articles.each do |article| %>
+        <tr>
+            <td><%= article.title %></td>
+            <td><%= article.text %></td>
+            <td><%= link_to 'Show', article_path(article) %></td>
+            <td><%= link_to 'Edit', edit_article_path(article) %></td>
+            <td><%= link_to 'Destroy', article_path(article),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
-<br>
-<br>
-<%= link_to 'Back to start', controller: 'welcome' %>
+        </tr>
+        <% end %>
+    </table>
+    <br>
+    <br>
+    <%= link_to 'Back to start', controller: 'welcome' %>
+</div>
