@@ -1,5 +1,11 @@
-<h1>Edit article</h1>
+<div class="edit">
+  <%= render 'header' %>
 
-<%= render 'form' %>
+  <div class="container text-justify color_text">
+  <h1>Edit article</h1>
 
-<%= link_to 'Back', articles_path %>
+  <%= render 'form' %>
+
+  <%= link_to 'Back', articles_path, class: 'btn btn-primary' %>
+  </div>
+</div>

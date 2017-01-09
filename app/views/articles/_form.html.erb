@@ -1,13 +1,15 @@
 <%= simple_form_for @article do |f| %>
-  <p>
-    <%= f.input :title %>
-  </p>
-
-  <p>
-    <%= f.input :text %>
-  </p>
-
-  <p>
+<p>
+    <h4>
+        <%= f.input :title %>
+    </h4>
+</p>
+<p>
+    <h4>
+        <%= f.input :text %>
+    </h4>
+</p>
+<p>
     <%= f.button :submit %>
-  </p>
+</p>
 <% end %>
